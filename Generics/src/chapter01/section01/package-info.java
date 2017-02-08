@@ -11,5 +11,9 @@
  * Semantically, Java generics are defined by erasure, whereas C++ templates are defined by expansion.
  * In C++ templates, each instance of a template at a new type is compiled separately.
  * In Java, no matter how many types of lists you use, there is always one version of the code, so bloat does not occur.
+ * *
+ * In C++, you also may instantiate a template with a constant value rather than a type,
+ * making it possible to use templates as a sort of “macroprocessor on steroids” that can perform arbitrarily complex computations at compile time.
+ * Java generics are deliberately restricted to types, to keep them simple and easy to understand.
  */
 package chapter01.section01;
