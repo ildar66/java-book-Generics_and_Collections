@@ -8,6 +8,10 @@ import java.util.List;
  */
 public class SubtypingAndTheSubstitutionPrinciple {
 
+    /* interface Collection<E> {
+        public boolean add(E elt);
+        ...
+    }*/
     public static void main(String[] args) {
         // Substitution Principle. Integer and Double are subtypes of Number:
         List<Number> nums = new ArrayList<Number>();
