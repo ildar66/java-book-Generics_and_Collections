@@ -56,6 +56,22 @@ public class TheGetAndPutPrinciple {
         nums = new ArrayList<Number>();
         double sum = sumCount(nums, 5);
         assert sum == 10;
+
+        /* If an extends wildcard is present, pretty much all you will be able to do is get but not put values of that type.*/
+        ints = new ArrayList<Integer>();
+        ints.add(1);
+        ints.add(2);
+        List<? extends Number> nums2 = ints;
+        double dbl = sum(nums2); // ok
+        // nums2.add(3.14); // compile-time error
+
+        /* if a super wildcard is present, pretty much all you will be able to do is put but not get values of that type.*/
+        objs = new ArrayList<Object>();
+        objs.add(1);
+        objs.add("two");
+        List<? super Integer> ints2 = objs;
+        ints2.add(3); // ok
+        // double dbl = sum(ints2); // compile-time error
     }
 
 }
