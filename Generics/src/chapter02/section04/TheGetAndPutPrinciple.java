@@ -72,6 +72,22 @@ public class TheGetAndPutPrinciple {
         List<? super Integer> ints2 = objs;
         ints2.add(3); // ok
         // double dbl = sum(ints2); // compile-time error
+
+        // You cannot put anything into a type declared with an extends wildcard—except for the value null, which belongs to every reference type:
+        ints = new ArrayList<Integer>();
+        ints.add(1);
+        ints.add(2);
+        List<? extends Number> nums3 = ints;
+        nums3.add(null); // ok
+        assert nums3.toString().equals("[1, 2, null]");
+
+        // you cannot get anything out from a type declared with a super wildcard—
+        // except for a value of type Object, which is a supertype of every reference type:
+        objs = Arrays.<Object>asList(1, "two");
+        List<? super Integer> ints3 = objs;
+        String str = "";
+        for (Object obj : ints3) str += obj.toString();
+        assert str.equals("1two");
     }
 
 }
