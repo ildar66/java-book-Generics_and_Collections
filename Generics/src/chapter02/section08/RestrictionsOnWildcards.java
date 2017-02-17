@@ -10,7 +10,7 @@ import java.util.List;
 public class RestrictionsOnWildcards {
 
     public static void main(String[] args) {
-        // Instance Creation:
+        // INSTANCE CREATION:
         // List<?> list = new ArrayList<?>(); // compile-time error
         // Map<String, ? extends Number> map = new HashMap<String, ? extends Number>(); // compile-time error
 
@@ -28,5 +28,19 @@ public class RestrictionsOnWildcards {
         assert lists.toString().equals("[[1, 2, 3], [four, five]]");
         // The wildcard type prohibits us from extracting elements from the inner lists as any type other than Object,
         // but since that is the type used by toString, this code is well typed.
+
+        // GENERIC METHOD CALLS:
+        List<?> list = Lists.factory();
+        List<?> list2 = Lists.<Object>factory();
+        // List<?> list3 = Lists.<?>factory(); // compile-time error
+        List<List<?>> list4 = Lists.<List<?>>factory(); // ok
+    }
+
+}
+
+class Lists {
+
+    public static <T> List<T> factory() {
+        return new ArrayList<T>();
     }
 }
