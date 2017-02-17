@@ -12,5 +12,9 @@
  * List<?> list = new ArrayList<Object>(); // ok
  * List<?> list = new List<Object>() // compile-time error
  * List<?> list = new ArrayList<?>() // compile-time error
+ * *
+ * When a class instance is created, it invokes the initializer for its supertype.
+ * Hence, any restriction that applies to instance creation must also apply to supertypes.
+ * In a class declaration, if the supertype or any superinterface has type parameters, these types must not be wildcards.
  */
 package chapter02.section08;
