@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Comparator;
 
-class Comparators {
+public class Comparators {
 
     public static <T> T max(Collection<? extends T> coll, Comparator<? super T> cmp) {
         T candidate = coll.iterator().next();
