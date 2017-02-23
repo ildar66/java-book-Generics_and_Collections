@@ -4,7 +4,7 @@ package chapter03.section05;
  * Enumerated Types.
  */
 class EnumeratedTypes {
-
+    // how it is look inside:
 }
 
 /**
@@ -55,7 +55,11 @@ final class Season extends Enum<Season> {
     }
 
     public static Season valueOf(String name) {
-        for (Season e : VALUES) if (e.name().equals(name)) return e;
+        for (Season e : VALUES) {
+            if (e.name().equals(name)) {
+                return e;
+            }
+        }
         throw new IllegalArgumentException();
     }
 }
