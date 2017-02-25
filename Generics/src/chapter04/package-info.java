@@ -1,0 +1,4 @@
+/**
+ * Declarations.
+ */
+package chapter04;

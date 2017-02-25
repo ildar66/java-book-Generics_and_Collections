@@ -18,4 +18,13 @@
  * 2.7 Wildcard Capture {@link chapter02.section07}
  * 2.8 Restrictions on Wildcards {@link chapter02.section08}.
  * *
+ * 3. Comparison and Bounds:
+ * 3.1 Comparable {@link chapter03.section01}
+ * 3.2 Maximum of a Collection {@link chapter03.section02}
+ * 3.3 A Fruity Example {@link chapter03.section03}
+ * 3.4 Comparator {@link chapter03.section04}
+ * 3.5 Enumerated Types {@link chapter03.section05}
+ * 3.6 Multiple Bounds {@link chapter03.section06}
+ * 3.7 Bridges {@link chapter03.section07}
+ * 3.8 Covariant Overriding {@link chapter03.section08}
  */
