@@ -27,4 +27,10 @@
  * 3.6 Multiple Bounds {@link chapter03.section06}
  * 3.7 Bridges {@link chapter03.section07}
  * 3.8 Covariant Overriding {@link chapter03.section08}
+ * *
+ * 4. Declarations;
+ * 4.1 Constructors {@link chapter04.section01}
+ * 4.2 Static Members {@link chapter04.section02}
+ * 4.3 Nested Classes {@link chapter04.section03}
+ * 4.4 How Erasure Works {@link chapter04.section04}
  */
