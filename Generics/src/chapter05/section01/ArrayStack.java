@@ -3,7 +3,7 @@ package chapter05.section01;
 import java.util.ArrayList;
 import java.util.List;
 
-class ArrayStack implements Stack {
+public class ArrayStack implements Stack {
 
     private List list;
 

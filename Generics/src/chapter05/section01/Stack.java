@@ -1,6 +1,6 @@
 package chapter05.section01;
 
-interface Stack {
+public interface Stack {
 
     public boolean empty();
 
