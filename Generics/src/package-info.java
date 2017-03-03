@@ -28,9 +28,19 @@
  * 3.7 Bridges {@link chapter03.section07}
  * 3.8 Covariant Overriding {@link chapter03.section08}
  * *
- * 4. Declarations;
+ * 4. Declarations:
  * 4.1 Constructors {@link chapter04.section01}
  * 4.2 Static Members {@link chapter04.section02}
  * 4.3 Nested Classes {@link chapter04.section03}
  * 4.4 How Erasure Works {@link chapter04.section04}
+ * *
+ * 5. Evolution, Not Revolution:
+ * 5.1 Legacy Library with Legacy Client {@link chapter05.section01}
+ * 5.2 Generic Library with Generic Client {@link chapter05.section02}
+ * 5.3 Generic Library with Legacy Client {@link chapter05.section03}
+ * 5.4 Legacy Library with Generic Client {@link chapter05.section04}
+ * 5.4.1 Evolving a Library using Minimal Changes {@link chapter05.section04.minimal}
+ * 5.4.2 Evolving a Library using Stubs {@link chapter05.section04.stubs}
+ * 5.4.3 Evolving a Library using Wrappers {@link chapter05.section04.wrapper}
+ * 5.5 Conclusions.
  */
