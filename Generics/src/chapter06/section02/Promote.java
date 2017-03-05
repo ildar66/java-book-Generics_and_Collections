@@ -4,7 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by User on 05.03.2017.
+ * This technique is important for fitting together legacy and generic code,
+ * and is one of the chief reasons for using erasure to implement generics.
  */
 public class Promote {
 
