@@ -16,5 +16,12 @@
  * Nonreifiable Casts. An instance test against a type that is not reifiable is always an error.
  * However, in some circumstances a cast to a type that is not reifiable is permitted.
  * @see chapter06.section02.InstanceTestsAndCasts#asList(java.util.Collection)
+ * *
+ * Unchecked casts.
+ * Only rarely will the compiler be able to determine that if a cast to a nonreifiable type succeeds then it must yield a value of that type.
+ * @see chapter06.section02.Promote
+ * In the remaining cases, a cast to a type that is not reifiable is flagged with an unchecked warning,
+ * whereas an instance test against a type that is not reifiable is always caught as an error.
+ * This is because there is never any point to an instance test that cannot be performed, but there may be a point to a cast that cannot be checked.
  */
 package chapter06.section02;
