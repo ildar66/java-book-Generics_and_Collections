@@ -13,5 +13,9 @@
  * if there are unchecked warnings, then casts inserted by erasure may fail.
  * Further, the cast that fails may be in a different part of the source code than was responsible for the unchecked warning!
  * This is why code that generates unchecked warnings must be written with extreme care.
+ * *
+ * One way to get a new array of a generic type is to already have an array of that type.
+ * Then the reified type information for the new array can be copied from the old.
+ * @see chapter06.section05.Right
  */
 package chapter06.section05;
