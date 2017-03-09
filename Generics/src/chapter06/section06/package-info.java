@@ -14,6 +14,8 @@
  * For example, the following two methods in the reflection library violate the principle:
  * TypeVariable<Class<T>>[] java.lang.Class.getTypeParameters()
  * TypeVariable<Method>[] java.lang.Reflect.Method.getTypeParameters()
+ * ( Possible fixes are to delete the type parameter from TypeVariable so that the methods return an array of reified type,
+ * or to replace the arrays with lists).
  * *
  * Don’t get caught out in the same way —
  * be sure to follow the Principle of Indecent Exposure rigorously in your own code!
