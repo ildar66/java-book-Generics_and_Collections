@@ -17,5 +17,12 @@
  * One way to get a new array of a generic type is to already have an array of that type.
  * Then the reified type information for the new array can be copied from the old.
  * @see chapter06.section05.Right
+ * *
+ * A Classy Alternative: {@link chapter06.section05.RightWithClass}
+ * In Java 5, the class Class has been made generic, and now has the form Class<T>.
+ * For example, String.class has type Class<String>.
+ * *
+ * The type Class<T> represents an interesting use of generics,
+ * quite different from collections or comparators(Chapter 7).
  */
 package chapter06.section05;
