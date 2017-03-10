@@ -8,13 +8,13 @@ import java.util.RandomAccess;
 
 class ArrayList<E> extends AbstractList<E> implements RandomAccess {
 
-    private E[] arr;
+    private Object[] arr;
     private int size = 0;
 
     public ArrayList(int cap) {
         if (cap < 0)
             throw new IllegalArgumentException("Illegal Capacity: " + cap);
-        arr = (E[]) new Object[cap];  // unchecked
+        arr = new Object[cap];
     }
 
     public ArrayList() {
@@ -30,8 +30,8 @@ class ArrayList<E> extends AbstractList<E> implements RandomAccess {
         int oldcap = arr.length;
         if (mincap > oldcap) {
             int newcap = Math.max(mincap, (oldcap * 3) / 2 + 1);
-            E[] oldarr = arr;
-            arr = (E[]) new Object[newcap];  // unchecked cast
+            E[] oldarr = (E[]) arr; // unchecked cast
+            arr = new Object[newcap];
             System.arraycopy(oldarr, 0, arr, 0, size);
         }
     }
@@ -47,12 +47,12 @@ class ArrayList<E> extends AbstractList<E> implements RandomAccess {
 
     public E get(int i) {
         checkBounds(i, size);
-        return arr[i];
+        return (E) arr[i]; // unchecked cast
     }
 
     public E set(int i, E elt) {
         checkBounds(i, size);
-        E old = arr[i];
+        E old = (E) arr[i]; // unchecked cast
         arr[i] = elt;
         return old;
     }
@@ -67,7 +67,7 @@ class ArrayList<E> extends AbstractList<E> implements RandomAccess {
 
     public E remove(int i) {
         checkBounds(i, size);
-        E old = arr[i];
+        E old = (E) arr[i]; // unchecked cast
         arr[i] = null;
         size--;
         System.arraycopy(arr, i + 1, arr, i, size - i);
