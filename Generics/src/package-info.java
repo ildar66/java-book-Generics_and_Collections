@@ -43,4 +43,25 @@
  * 5.4.2 Evolving a Library using Stubs {@link chapter05.section04.stubs}
  * 5.4.3 Evolving a Library using Wrappers {@link chapter05.section04.wrapper}
  * 5.5 Conclusions.
+ * *
+ * 6. Reification:
+ * 6.1 Reifiable Types {@link chapter06.section01}
+ * 6.2 Instance Tests and Casts {@link chapter06.section02}
+ * 6.3 Exception Handling {@link chapter06.section03}
+ * 6.4 Array Creation {@link chapter06.section04}
+ * 6.5 The Principle of Truth in Advertising {@link chapter06.section05}
+ * 6.6 The Principle of Indecent Exposure {@link chapter06.section06}
+ * 6.7 How to Define ArrayList {@link chapter06.section07}
+ * 6.8 Array Creation and Varargs {@link chapter06.section08}
+ * 6.9 Arrays as a Deprecated Type? {@link chapter06.section09}
+ * 6.10 Summing Up.
+ * *
+ * 7. Reflection:
+ * 7.1 Generics for Reflection {@link chapter07.section01}
+ * 7.2 Reflected Types are Reifiable Types {@link chapter07.section02}
+ * 7.3 Reflection for Primitive Types {@link chapter07.section03}
+ * 7.4 A Generic Reflection Library {@link chapter07.section04}
+ * 7.5 Reflection for Generics {@link chapter07.section05}
+ * 7.6 Reflecting Generic Types {@link chapter07.section06}
+ * *
  */
