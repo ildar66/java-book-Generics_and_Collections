@@ -64,4 +64,10 @@
  * 7.5 Reflection for Generics {@link chapter07.section05}
  * 7.6 Reflecting Generic Types {@link chapter07.section06}
  * *
+ * 8. Effective Generics:
+ * 8.1 Take Care when Calling Legacy Code {@link chapter08.section01}
+ * 8.2 Use Checked Collections to Enforce Security {@link chapter08.section02}
+ * 8.3 Specialize to Create Reifiable Types {@link chapter08.section03}
+ * 8.4 Maintain Binary Compatibility {@link chapter08.section04}
+ * vi
  */
