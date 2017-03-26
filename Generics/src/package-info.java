@@ -69,5 +69,5 @@
  * 8.2 Use Checked Collections to Enforce Security {@link chapter08.section02}
  * 8.3 Specialize to Create Reifiable Types {@link chapter08.section03}
  * 8.4 Maintain Binary Compatibility {@link chapter08.section04}
- * vi
+ * *
  */
