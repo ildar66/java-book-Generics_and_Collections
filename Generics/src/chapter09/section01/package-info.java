@@ -16,7 +16,19 @@
  * The Visitor pattern makes it possible to provide new operations without modifying the classes that define the data structure.
  * Example {@link chapter09.section01.visitors.Tree} illustrates this pattern applied to trees.
  * *
- * Example 9-3 illustrates how to implement the toString and sum methods on trees within the client,
+ * Example {@link chapter09.section01.visitors.TreeClient} illustrates how to implement the toString and sum methods on trees within the client,
  * rather than within the class that defines the data structure.
+ * *
+ * It is interesting to note that the generic type of the sum method can be more precise with visitors:
+ * • With simple trees, the sum method must have a type signature that indicates that it works on any element type;
+ * a cast is required to convert each leaf to type Number;
+ * and a class cast error is raised at run time if sum is invoked on a tree not containing numbers.
+ * • With visitors, the sum method may have a type signature that indicates that it works only on elements that are numbers;
+ * no cast is required; and a type error is reported at compile time if sum is invoked on a tree not containing numbers.
+ * *
+ * In practice, you will often use a combination of the simple approach and the Visitor pattern.
+ * For instance,
+ * you might choose to define standard methods, such as "toString": {@link chapter09.section01.combine.Tree#toString()} , using the simple approach,
+ * while using Visitor for other methods, such as "sum": {@link chapter09.section01.combine.TreeClient#sum(chapter09.section01.combine.Tree)}.
  */
 package chapter09.section01;
