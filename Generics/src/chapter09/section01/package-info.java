@@ -14,5 +14,6 @@
  * that define the structure and the classes that are clients of the structure.
  * *
  * The Visitor pattern makes it possible to provide new operations without modifying the classes that define the data structure.
+ * Example {@link chapter09.section01.visitors.Tree} illustrates this pattern applied to trees.
  */
 package chapter09.section01;
