@@ -15,5 +15,8 @@
  * *
  * The Visitor pattern makes it possible to provide new operations without modifying the classes that define the data structure.
  * Example {@link chapter09.section01.visitors.Tree} illustrates this pattern applied to trees.
+ * *
+ * Example 9-3 illustrates how to implement the toString and sum methods on trees within the client,
+ * rather than within the class that defines the data structure.
  */
 package chapter09.section01;
