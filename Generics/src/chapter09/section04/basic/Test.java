@@ -26,5 +26,9 @@ class Test {
         TaxStrategy<Trust> trustStrategy = new TrustTaxStrategy();
         assert trustStrategy.computeTax(nonProfit) == 0;
         assert trustStrategy.computeTax(forProfit) == 4000000;
+
+        // Generics allow us to specialize a given tax strategy to a given type of tax payer,
+        // and allow the compiler to detect when a tax strategy is applied to the wrong type of tax payer:
+        // trustStrategy.computeTax(person); // compile-time error
     }
 }
