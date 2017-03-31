@@ -55,5 +55,14 @@
  * abstract class Trust<T extends Trust<T>> extends TaxPayer<T> { ... }
  * final class NonProfitTrust extends Trust<NonProfitTrust> { ... }
  * final class ForProfitTrust extends Trust<ForProfitTrust> { ... }
+ * *************************
+ * Summary:
+ * As we have seen, recursive type parameters often appear in Java:
+ * class TaxPayer<P extends TaxPayer<P>>
+ * Comparable<T extends Comparable<T>>
+ * class Enum<E extends Enum<E>>
+ * *
+ * The getThis trick is useful in this situation whenever one wants to use this in the base type
+ * with the more specific type provided by the type parameter.
  */
 package chapter09.section04;
