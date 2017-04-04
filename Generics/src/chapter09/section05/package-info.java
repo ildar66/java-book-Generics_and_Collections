@@ -30,5 +30,10 @@
  * We use stubs because we don’t want to make any changes to the source of the library, since it is maintained by Sun.
  * *
  * As a demonstration client for Observable and Observer, a currency converter is presented in Example {@link chapter09.section05.converter}.
+ * *
+ * This concludes our discussion of generics.
+ * You now have a thorough grounding that enables you to use generic libraries defined by others, to define your own libraries,
+ * to evolve legacy code to generic code, to understand restrictions on generics and avoid the pitfalls,
+ * to use checking and specialization where needed, and to exploit generics in design patterns.
  */
 package chapter09.section05;

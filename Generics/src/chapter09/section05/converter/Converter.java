@@ -72,13 +72,13 @@ class ValueView extends JTextField implements CView {
         }
     }
 
-    // not need if ise stab:)
+    // not need if use stab:)
     public void update(Observable model, Object currency) {
         update((CModel) model, (Currency) currency);
     }
 }
 
-// uncomment if ise stab:)
+// uncomment if use stab:)
 class CModel extends Observable/*<CModel, CView, Currency>*/ {
 
     private final EnumMap<Currency, Double> rates;
@@ -114,6 +114,12 @@ class CModel extends Observable/*<CModel, CView, Currency>*/ {
     }
 }
 
+/**
+ * The converter allows you to enter conversion rates for each of three currencies (dollars, euros, and pounds),
+ * and to enter a value under any currency.
+ * Changing the entry for a rate causes the corresponding value to be recomputed;
+ * changing the entry for a value causes all the values to be recomputed.
+ */
 class Converter extends JFrame {
 
     public Converter() {
