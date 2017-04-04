@@ -28,5 +28,7 @@
  * We compile the client against the generic signatures of Observable and Observer,
  * but run the code against the class files in the standard Java distribution.
  * We use stubs because we don’t want to make any changes to the source of the library, since it is maintained by Sun.
+ * *
+ * As a demonstration client for Observable and Observer, a currency converter is presented in Example {@link chapter09.section05.converter}.
  */
 package chapter09.section05;
