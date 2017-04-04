@@ -70,4 +70,10 @@
  * 8.3 Specialize to Create Reifiable Types {@link chapter08.section03}
  * 8.4 Maintain Binary Compatibility {@link chapter08.section04}
  * *
+ * 9. Design Patterns:
+ * 9.1 Visitor {@link chapter09.section01}
+ * 9.2 Interpreter {@link chapter09.section02}
+ * 9.3 Function {@link chapter09.section03}
+ * 9.4 Strategy {@link chapter09.section04}
+ * 9.5 Subject-Observer {@link chapter09.section05}
  */
