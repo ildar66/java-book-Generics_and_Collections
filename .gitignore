@@ -13,3 +13,5 @@ hs_err_pid*
 /.idea/
 /java-book-Generics_and_Collections.iml
 /Generics/Generics.iml
+/Collections/Collections.iml
+out/
