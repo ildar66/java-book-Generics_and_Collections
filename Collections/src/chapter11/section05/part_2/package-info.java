@@ -31,6 +31,31 @@
  * so all calls on the wrapped object will be synchronized on the same lock—that belonging to the wrapper object itself.
  * It’s important to have the synchronized wrappers available, but you won’t use them more than you have to,
  * because they suffer the same performance disadvantages as the legacy collections.
- * *********************************************************************************
+ * **************************************
+ * Using Synchronized Collections Safely:
+ * Even a class like {@link chapter11.section05.SynchronizedArrayStack}, which has fully synchronized methods and is itself thread-safe,
+ * must still be used with care in a concurrent environment. For example, this client code is not thread-safe:
+ * {@link chapter11.section05.SynchronizedArrayStack#notThreadSafe()}
+ * The exception would be raised if the last element on the stack were removed by another thread
+ * in the time between the evaluation of isEmpty and the execution of pop.
+ * This is an example of a common concurrent program bug, sometimes called test-then-act,
+ * in which program behavior is guided by information that in some circumstances will be out of date.
+ * To avoid it, the test and action must be executed atomically.
+ * *
+ * For synchronized collections (as for the legacy collections), this must be enforced with client-side locking:
+ * synchronized(stack) { if (!stack.isEmpty()) { stack.pop(); }
+ * For this technique to work reliably,
+ * the lock that the client uses to guard the atomic action should be the same one that is used by the methods of the synchronized wrapper.
+ * In this example, as in the synchronized collections, the methods of the wrapper are synchronized on the wrapper object itself.
+ * (An alternative is to confine references to the collection within a single client, which enforces its own synchronization discipline.
+ * But this strategy has limited applicability.)
+ * *
+ * Client-side locking ensures thread-safety, but at a cost:
+ * since other threads cannot use any of the collection’s methods while the action is being performed,
+ * guarding a long-lasting action (say, iterating over an entire array) will have an impact on throughput.
+ * This impact can be very large if the synchronized methods are heavily used;
+ * unless your application needs a feature of the synchronized collections, such as exclusive locking,
+ * the Java 5 concurrent collections are almost always a better option.
+ * }
  */
 package chapter11.section05.part_2;
