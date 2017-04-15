@@ -50,6 +50,26 @@
  * Other collections using these locks include {@link java.util.concurrent.ConcurrentHashMap} and most of the implementations of {@link
  * java.util.concurrent.BlockingQueue}.
  * *
- * **********Iterators*********
+ * ********** Iterators *********
+ * The mechanisms described above lead to iterator policies more suitable for concurrent use than fail-fast,
+ * which implicitly regards concurrent modification as a problem to be eliminated.
+ * Copy-on-write collections have snapshot iterators.
+ * These collections are backed by arrays which, once created, are never changed;
+ * if a value in the collection needs to be changed, a new array is created.
+ * So an iterator can read the values in one of these arrays (but never modify them) without danger of them being changed by another thread.
+ * Snapshot iterators do not throw {@link java.util.ConcurrentModificationException}.
+ * *
+ * Collections which rely on CAS have weakly consistent iterators,
+ * which reflect some but not necessarily all of the changes that have been made to their backing collection since they were created.
+ * For example,
+ * if elements in the collection have been modified or removed before the iterator reaches them, it definitely will reflect these changes,
+ * but no such guarantee is made for insertions. Weakly consistent iterators also do not throw {@link java.util.ConcurrentModificationException}.
+ * *
+ * The third group described above also have weakly consistent iterators.
+ * In Java 6 this includes {@link java.util.concurrent.DelayQueue} and {@link java.util.concurrent.PriorityBlockingQueue},
+ * which in Java 5 had fail-fast iterators.
+ * This means that you cannot iterate over the Java 5 version of these queues unless they are quiescent,
+ * at a time when no elements are being added or inserted;
+ * at other times you have to copy their elements into an array using toArray and iterate over that instead.
  */
 package chapter11.section05.part_3;
