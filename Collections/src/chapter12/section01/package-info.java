@@ -21,5 +21,18 @@
  * This task will be useful when we construct range views of sorted sets (see chapter13.2).
  * *
  * Example tasks and task collections for the task manager: {@link chapter12.section01.StaticTestData}
+ * *
+ * Now we can use the methods of {@link java.util.Collection} to work with these categories:
+ * @see chapter12.section01.CollectionMethodsTest
+ * This example provides an explanation of the signatures of methods in this group and the next.
+ * We have already discussed (chapter02.6) why they take arguments of type Object or Collection<?>
+ * when the methods for adding to the collection restrict their arguments to its parametric type.
+ * Taking the example of retainAll,
+ * its contract requires the removal of those elements of this collection which do not occur in the argument collection.
+ * That gives no justification for restricting what the argument collection may contain;
+ * in the preceding example it can contain instances of any kind of Task, not just PhoneTask.
+ * And it is too narrow even to restrict the argument to collections of supertypes of the parametric type;
+ * we want the least restrictive type possible, which is Collection<? >.
+ * Similar reasoning applies to remove, removeAll, contains, and containsAll.
  */
 package chapter12.section01;

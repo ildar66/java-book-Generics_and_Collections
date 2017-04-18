@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
+/**
+ * We’ve chosen ArrayList as the implementation of Collection to use in this example,
+ * but we’re not going to take advantage of any of the special properties of lists;
+ * we’re treating Array List as an implementation of Collection and nothing more.
+ * As part of the retrieval process, we have organized the tasks into various categories represented by lists,
+ * using the methodCollections.addAll introduced in chapter01.4.
+ */
 public class StaticTestData {
 
     public static PhoneTask mikePhone = new PhoneTask("Mike", "987 6543");
