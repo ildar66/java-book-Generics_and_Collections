@@ -32,7 +32,9 @@
  * That gives no justification for restricting what the argument collection may contain;
  * in the preceding example it can contain instances of any kind of Task, not just PhoneTask.
  * And it is too narrow even to restrict the argument to collections of supertypes of the parametric type;
- * we want the least restrictive type possible, which is Collection<? >.
+ * we want the least restrictive type possible, which is Collection<?>.
  * Similar reasoning applies to remove, removeAll, contains, and containsAll.
+ * *
+ * Merging collections using natural ordering: {@link chapter12.section01.MergeCollections}
  */
 package chapter12.section01;
