@@ -48,6 +48,8 @@ public class SortedSetTest {
         // 7:
         PriorityTask nextTask = priorityTasks.pollFirst();
         assert nextTask.toString().equals("phone Paul: HIGH");
+
+        // 8:
         PriorityTask mikePhoneMedium = new PriorityTask(mikePhone, Priority.MEDIUM);
         NavigableSet closedInterval = priorityTasks.subSet(firstMediumPriorityTask, true, mikePhoneMedium, true);
         assert (closedInterval.toString()).equals("[code db: MEDIUM, phone Mike: MEDIUM]");
