@@ -18,4 +18,15 @@
  * 12.2 Implementing Collection {@link chapter12.section02}
  * 12.3 Collection Constructors {@link chapter12.section03}
  * *
+ * 13. Sets:
+ * 13.1 Implementing Set {@link chapter13.section01}
+ * 13.1.1 HashSet {@link chapter13.section01.part_1}
+ * 13.1.2 LinkedHashSet {@link chapter13.section01.part_2}
+ * 13.1.3 CopyOnWriteArraySet {@link chapter13.section01.part_3}
+ * 13.1.4 EnumSet {@link chapter13.section01.part_4}
+ * 13.2 SortedSet and NavigableSet {@link chapter13.section02}
+ * 13.2.1 NavigableSet {@link chapter13.section02.part_1}
+ * 13.2.2 TreeSet {@link chapter13.section02.part_2}
+ * 13.2.3 ConcurrentSkipListSet {@link chapter13.section02.part_3}
+ * 13.3 Comparing Set Implementations {@link chapter13.section03}
  */
