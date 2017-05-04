@@ -7,7 +7,7 @@ public final class PriorityTask implements Comparable<PriorityTask> {
     private final Task task;
     private final Priority priority;
 
-    PriorityTask(Task task, Priority priority) {
+    public PriorityTask(Task task, Priority priority) {
         this.task = task;
         this.priority = priority;
     }
