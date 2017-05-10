@@ -57,5 +57,10 @@
  * operations such as contains which require traversal of the array require linear time.
  * The iterators are weakly consistent.
  * *
+ * **************** {@link java.util.concurrent.PriorityBlockingQueue} *************
+ * This implementation is a thread-safe, blocking version of {@link java.util.PriorityQueue} (see chapter14.2),
+ * with similar ordering and performance characteristics.
+ * Its iterators are failfast, so in normal use they will throw ConcurrentModificationException; only if the queue is quiescent will they succeed.
+ * To iterate safely over a {@link java.util.concurrent.PriorityBlockingQueue}, transfer the elements to an array and iterate over that instead.
  */
 package chapter14.section03.part_2;
