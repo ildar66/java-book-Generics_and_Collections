@@ -62,5 +62,37 @@
  * with similar ordering and performance characteristics.
  * Its iterators are failfast, so in normal use they will throw ConcurrentModificationException; only if the queue is quiescent will they succeed.
  * To iterate safely over a {@link java.util.concurrent.PriorityBlockingQueue}, transfer the elements to an array and iterate over that instead.
+ * *
+ * **************** {@link java.util.concurrent.DelayQueue} ****************
+ * This is a specialized priority queue, in which the ordering is based on the delay time for each element —
+ * the time remaining before the element will be ready to be taken from the queue.
+ * If all elements have a positive delay time—that is, none of their associated delay times has expired —
+ * an attempt to poll the queue will return null (although peek will still allow you to see the first unexpired element).
+ * If one or more elements has an expired delay time, the one with the longest-expired delay time will be at the head of the queue.
+ * The elements of a {@link java.util.concurrent.DelayQueue} belong to a class that implements {@link java.util.concurrent.Delayed}:
+ * *
+ * interface Delayed extends Comparable<Delayed> {
+ * long getDelay(TimeUnit unit);
+ * }
+ * *
+ * The getDelay() method of a {@link java.util.concurrent.Delayed} object returns the remaining delay associated with that object.
+ * The compareTo() method (see chapter3.1) of {@link java.lang.Comparable} must be defined to give results that are consistent
+ * with the delays of the objects being compared. This means that it will rarely be compatible with equals(),
+ * so Delayed objects are not suitable for use with implementations of {@link java.util.SortedSet} and {@link java.util.SortedMap}.
+ * For example,
+ * in our to-do manager we are likely to need reminder tasks, to ensure that we follow up e-mail and phone messages that have gone unanswered.
+ * We could define a new class {@link chapter14.section03.part_2.DelayedTask}, and use it to implement a reminder queue.
+ * *
+ * Most queue operations respect delay values and will treat a queue with no unexpired elements as if it were empty.
+ * The exceptions are peek() and remove(), which, perhaps surprisingly, will allow you to examine the head element
+ * of a {@link java.util.concurrent.DelayQueue} whether or not it is expired.
+ * Like them and unlike the other methods of {@link java.util.Queue}, collection operations on a DelayQueue do not respect delay values.
+ * @see chapter14.section03.part_2.DelayedTask#main(java.lang.String[])
+ * *
+ * DelayQueue shares the performance characteristics of the {@link java.util.PriorityQueue} on which it is based and,
+ * like it, has fail-fast iterators.
+ * The comments on {@link java.util.concurrent.PriorityBlockingQueue} iterators apply to these too.
+ * *
+ * ***************
  */
 package chapter14.section03.part_2;
