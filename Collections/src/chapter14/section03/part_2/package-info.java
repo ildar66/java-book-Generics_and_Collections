@@ -93,6 +93,24 @@
  * like it, has fail-fast iterators.
  * The comments on {@link java.util.concurrent.PriorityBlockingQueue} iterators apply to these too.
  * *
- * ***************
+ * *************** {@link java.util.concurrent.SynchronousQueue} **********************
+ * At first sight, you might think there is little point to a queue with no internal capacity, which is a short description of SynchronousQueue.
+ * But, in fact, it can be very useful; a thread that wants to add an element to a SynchronousQueue must wait until another thread is ready
+ * to simultaneously take it off, and the same is true—in reverse—for a thread that wants to take an element off the queue.
+ * So SynchronousQueue has the function that its name suggests, that of a rendezvous — a mechanism for synchronizing two threads.
+ * (Don’t confuse the concept of synchronizing threads in this way—allowing them to cooperate by exchanging data
+ * — with Java’s keyword synchronized, which prevents simultaneous execution of code by different threads.)
+ * *
+ * There are two constructors for SynchronousQueue:
+ * SynchronousQueue()
+ * SynchronousQueue(boolean fair)
+ * *
+ * A common application for SynchronousQueue is in work-sharing systems where the design ensures that there are enough consumer threads to ensure
+ * that producer threads can hand tasks over without having to wait. In this situation, it allows safe transfer of task data between threads
+ * without incurring the {@link java.util.concurrent.BlockingQueue} overhead of enqueuing, then dequeuing, each task being transferred.
+ * *
+ * As far as the Collection methods are concerned, a {@link java.util.concurrent.SynchronousQueue} behaves like an empty Collection;
+ * Queue and BlockingQueue methods behave as you would expect for a queue with zero capacity, which is therefore always empty.
+ * The iterator method returns an empty iterator, in which hasNext() always returns false.
  */
 package chapter14.section03.part_2;
