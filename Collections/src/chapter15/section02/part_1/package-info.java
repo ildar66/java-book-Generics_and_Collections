@@ -44,6 +44,6 @@
  * frequent create-copy operations. The initial capacity of an {@link java.util.ArrayList} created by the default constructor is 10,
  * and that of one initialized with the elements of another collection is 110% of the size of that collection.
  * *
- * The iterators of ArrayList are fail-fast.
+ * The iterators of {@link java.util.ArrayList} are fail-fast.
  */
 package chapter15.section02.part_1;
