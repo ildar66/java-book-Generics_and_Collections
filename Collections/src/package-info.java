@@ -42,4 +42,13 @@
  * 14.4.1 Implementing Deque {@link chapter14.section04.part_1}
  * 14.4.2 BlockingDeque {@link chapter14.section04.part_2}
  * 14.5 Comparing Queue Implementations {@link chapter14.section05}
+ * *
+ * 15. Lists {@link chapter15}
+ * 15.1 Using the Methods of List {@link chapter15.section01}
+ * 15.2 Implementing List {@link chapter15.section02}
+ * 15.2.1 ArrayList {@link chapter15.section02.part_1}
+ * 15.2.2 LinkedList {@link chapter15.section02.part_2}
+ * 15.2.3 CopyOnWriteArrayList {@link chapter15.section02.part_3}
+ * 15.3 Comparing List Implementations {@link chapter15.section03}
+ * *
  */
