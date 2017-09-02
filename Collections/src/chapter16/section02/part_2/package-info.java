@@ -43,7 +43,7 @@
  * However LRU is usually more effective than FIFO, because the reduced cost of cache refreshes outweighs the overhead of maintaining access
  * ordering.
  * *
- * Iteration over a collection of keys or values returned by a LinkedHashMap is linear in the number of elements.
+ * Iteration over a collection of keys or values returned by a {@link java.util.LinkedHashMap} is linear in the number of elements.
  * The iterators over such collections are fail-fast.
  */
 package chapter16.section02.part_2;
