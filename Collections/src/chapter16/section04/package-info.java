@@ -19,6 +19,6 @@
  * V replace(K key, V value) // replace entry for key only if it is currently present.
  * *                         // Return the old value (may be null) if the key was present, otherwise return null
  * boolean replace(K key, V oldValue, V newValue) // replace entry for key only if it is currently mapped to oldValue.
- * *                                              //Return true if the value was replaced, false otherwise
+ * *                                              // Return true if the value was replaced, false otherwise
  */
 package chapter16.section04;
