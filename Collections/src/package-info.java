@@ -51,4 +51,33 @@
  * 15.2.3 CopyOnWriteArrayList {@link chapter15.section02.part_3}
  * 15.3 Comparing List Implementations {@link chapter15.section03}
  * *
+ * 16. Maps:
+ * 16.1 Using the Methods of Map {@link chapter16.section01}
+ * 16.2 Implementing Map {@link chapter16.section02}
+ * 16.2.1 HashMap {@link chapter16.section02.part_1}
+ * 16.2.2 LinkedHashMap {@link chapter16.section02.part_2}
+ * 16.2.3 WeakHashMap {@link chapter16.section02.part_3}
+ * 16.2.4 IdentityHashMap {@link chapter16.section02.part_4}
+ * 16.2.5 EnumMap {@link chapter16.section02.part_5}
+ * 16.3 SortedMap and NavigableMap {@link chapter16.section03}
+ * 16.3.1 NavigableMap {@link chapter16.section03.part_1}
+ * 16.3.2 TreeMap {@link chapter16.section03.part_2}
+ * 16.4 ConcurrentMap {@link chapter16.section04}
+ * 16.4.1 ConcurrentHashMap {@link chapter16.section04.part_1}
+ * 16.5 ConcurrentNavigableMap {@link chapter16.section05}
+ * 16.5.1 ConcurrentSkipListMap {@link chapter16.section05.part_1}
+ * 16.6 Comparing Map Implementations {@link chapter16.section06}
+ * *
+ * 17. The Collections Class:
+ * 17.1 Generic Algorithms {@link chapter17.section01}
+ * 17.1.1 Changing the Order of List Elements {@link chapter17.section01.part_1}
+ * 17.1.2 Changing the Contents of a List {@link chapter17.section01.part_2}
+ * 17.1.3 Finding Extreme Values in a Collection {@link chapter17.section01.part_3}
+ * 17.1.4 Finding Specific Values in a List {@link chapter17.section01.part_4}
+ * 17.2 Collection Factories {@link chapter17.section02}
+ * 17.3 Wrappers {@link chapter17.section03}
+ * 17.3.1 Synchronized Collections {@link chapter17.section03.part_1}
+ * 17.3.2 Unmodifiable Collections {@link chapter17.section03.part_2}
+ * 17.3.3 Checked Collections {@link chapter17.section03.part_3}
+ * 17.4 Other Methods {@link chapter17.section04}
  */

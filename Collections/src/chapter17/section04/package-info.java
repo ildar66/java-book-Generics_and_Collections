@@ -67,4 +67,4 @@
  * We hope you will see that generics and collections fit together well to make a powerful addition to your repertory of
  * Java programming skills.
  */
-package chapter17.section03.part_4;
+package chapter17.section04;
