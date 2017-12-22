@@ -27,6 +27,44 @@
  * ********************* frequency():
  * int frequency(Collection<?> c, Object o) // returns the number of elements in c that are equal to o
  * If the supplied value o is null, then frequency returns the number of null elements in the collection c.
+ * ********************* list():
+ * <T> ArrayList<T> list(Enumeration<T> e) // returns an ArrayList containing the elements returned by the specified Enumeration
+ * This method is provided for interoperation with APIs whose methods return results of type Enumeration, a legacy version of Iterator.
+ * The ArrayList that it returns contains the same elements, in the same order, as provided by e.
+ * This method forms a pair with the method enumeration, which converts a Framework collection to an Enumeration.
+ * ********************* newSetFromMap():
+ * <E> Set<E> newSetFromMap(Map<E, Boolean> map) returns a set backed by the specified map.
+ * As we saw earlier, many sets (such as {@link java.util.TreeSet} and NavigableSkipListSet) are implemented by maps,
+ * and share their ordering, concurrency, and performance characteristics.
+ * Some maps, however (such as WeakHashMap and IdentityHashMap) do not have standard Set equivalents.
+ * The purpose of the method newSetFromMap is to provide equivalent Set implementations for such maps.
+ * The method newSetFromMap wraps its argument, which must be empty when supplied and should never be subsequently accessed directly.
+ * This code shows the standard idiom for using it to create a weak HashSet, one whose elements are held via weak references:
+ * Set<Object> weakHashSet = Collections.newSetFromMap( new WeakHashMap<Object, Boolean>());
+ * ********************** reverseOrder():
+ * <T> Comparator<T> reverseOrder() returns a comparator that reverses natural ordering
+ * This method provides a simple way of sorting or maintaining a collection of Comparable objects in reverse natural order.
+ * Here is an example of its use:
  * *
+ * SortedSet<Integer> s = new TreeSet<Integer>(Collections.reverseOrder());
+ * Collections.addAll(s, 1, 2, 3);
+ * assert s.toString().equals("[3, 2, 1]");
+ * *
+ * There is also a second form of this method.
+ * <T> Comparator<T> reverseOrder(Comparator<T> cmp)
+ * This method is like the preceding one, but instead of reversing the natural order of an object collection,
+ * it reverses the order of the Comparator supplied as its argument.
+ * Its behaviour when supplied with null is unusual for a method of the Collections class.
+ * The contract for Collections states that its methods throw a {@link java.lang.NullPointerException}
+ * if the collections or class objects provided to them are null,
+ * but if this method is supplied with null it returns the same result as a call of reverseOrder() —
+ * that is, it returns a {@link java.util.Comparator} that reverses the natural order of a collection of objects.
+ * * ************************ Conclusion
+ * This completes our tour of the convenience methods provided by the Collections class, and our discussion of the Collections Framework.
+ * We have presented collections, sets, lists, queues, and maps, and given you the information you need to choose which interface and
+ * implementation best fits your needs. Generics and the improved Collections Framework are possibly the most significant change to Java
+ * since its inception.We are excited about these changes, and hope we have conveyed some of this excitement to you.
+ * We hope you will see that generics and collections fit together well to make a powerful addition to your repertory of
+ * Java programming skills.
  */
 package chapter17.section03.part_4;
